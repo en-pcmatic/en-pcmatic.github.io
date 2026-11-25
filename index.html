@@ -1,0 +1,268 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PC Matic Scan Error - Help Center</title>
+<meta name="description" content="Explore the PC Matic scan error demonstration and learn about common application errors, scan interruptions, and troubleshooting steps.">
+<meta name="keywords" content="PC Matic scan error, PC Matic troubleshooting, PC Matic scan problem, PC Matic error help, PC Matic support">
+<link href="index.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="app-wrapper">
+
+  <!-- HEADER -->
+  <header class="top-header">
+
+    <div class="window-controls">
+      <span>−</span>
+      <span>□</span>
+      <span>×</span>
+    </div>
+
+    <div class="brand-area">
+      <div class="brand-shield">⬟</div>
+
+      <div>
+        <div class="brand-title">
+          PC Matic<sup>®</sup>
+        </div>
+        <div class="brand-subtitle">
+          Internet Security for Your PC
+        </div>
+      </div>
+    </div>
+
+    <nav class="navigation">
+      <div class="nav-item active">
+        <span class="nav-icon">⌂</span>
+        <span>Scan</span>
+      </div>
+
+      <div class="nav-item">
+        <span class="nav-icon">♢</span>
+        <span>Protection</span>
+      </div>
+
+      <div class="nav-item">
+        <span class="nav-icon">⚙</span>
+        <span>Settings</span>
+      </div>
+
+      <div class="nav-item">
+        <span class="nav-icon">▥</span>
+        <span>Reports</span>
+      </div>
+    </nav>
+
+  </header>
+
+  <!-- MAIN SCAN SECTION -->
+  <main class="scan-area">
+
+    <h1 class="scan-heading">Scanning your PC...</h1>
+
+    <!-- Monitor Illustration -->
+    <div class="monitor-container">
+      <div class="monitor-screen">
+        <div class="monitor-logo">⬟</div>
+        <div class="monitor-ring"></div>
+      </div>
+      <div class="monitor-stand"></div>
+      <div class="monitor-base"></div>
+    </div>
+
+    <!-- ERROR POPUP -->
+    <div class="error-modal" id="errorModal">
+
+      <div class="modal-header">
+        <span>PC Matic</span>
+        <button id="headerClose" aria-label="Close">×</button>
+      </div>
+
+      <div class="modal-body">
+
+        <div class="error-heading">
+          <span class="warning-icon">⚠️</span>
+          <span>PC Matic – Scan Error</span>
+        </div>
+
+        <div class="error-details">
+          <strong>Error:</strong> Ajax request timed out.<br>
+          SaveStabilityTests.asp
+        </div>
+
+        <p class="error-description">
+          The security scan could not be completed. Please check
+          your internet connection and restart the application.
+        </p>
+
+        <div class="modal-buttons">
+
+          <button class="retry-button" id="retryScan">
+            Retry Scan
+          </button>
+
+          <button id="closeModal">
+            Close
+          </button>
+
+          <button id="troubleshoot">
+            Troubleshooting Help
+          </button>
+
+        </div>
+
+        <div class="help-panel" id="helpPanel">
+          <h3>Troubleshooting Information</h3>
+          <p>
+            Check your internet connection, restart the application,
+            and review available software updates. If the issue
+            continues, note the exact error message for further review.
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- PROGRESS -->
+    <div class="progress-section">
+
+      <div class="search-icon">🔍</div>
+
+      <div class="progress-heading" id="progressHeading">
+        Scanning for threats...
+      </div>
+
+      <div class="progress-description" id="progressDescription">
+        This may take a few minutes. Please wait.
+      </div>
+
+      <div class="progress-content">
+
+        <div class="progress-track">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+
+        <div class="progress-percent" id="progressPercent">
+          1%
+        </div>
+
+      </div>
+
+      <div class="progress-status" id="progressStatus">
+        Demo scan initializing...
+      </div>
+
+    </div>
+
+  </main>
+
+
+</div>
+
+<!-- JAVASCRIPT -->
+<script>
+(function () {
+
+  const modal = document.getElementById("errorModal");
+  const fill = document.getElementById("progressFill");
+  const percent = document.getElementById("progressPercent");
+  const status = document.getElementById("progressStatus");
+  const heading = document.getElementById("progressHeading");
+  const description = document.getElementById("progressDescription");
+  const helpPanel = document.getElementById("helpPanel");
+
+  let progress = 0;
+  let scanTimer = null;
+
+  function startScan() {
+
+    clearInterval(scanTimer);
+
+    progress = 0;
+
+    modal.style.display = "block";
+    helpPanel.style.display = "none";
+
+    fill.style.width = "1%";
+    percent.textContent = "1%";
+
+    heading.textContent = "Scanning for threats...";
+    description.textContent =
+      "This may take a few minutes. Please wait.";
+
+    status.textContent =
+      "Demonstration scan initializing...";
+
+    scanTimer = setInterval(function () {
+
+      progress++;
+
+      fill.style.width = progress + "%";
+      percent.textContent = progress + "%";
+
+      status.textContent =
+        "scan progress: " + progress + "%";
+
+      if (progress >= 100) {
+
+        clearInterval(scanTimer);
+
+        heading.textContent = "Scan Completed";
+        description.textContent =
+          "The demonstration progress has reached 100%.";
+
+        status.textContent =
+          "Scan complete. No actual device scan was performed.";
+
+      }
+
+    }, 120);
+
+  }
+
+  // Retry scan
+  document.getElementById("retryScan").addEventListener(
+    "click", function () {
+      startScan();
+    }
+  );
+
+  // Close popup
+  function closePopup() {
+    modal.style.display = "none";
+    clearInterval(scanTimer);
+  }
+
+  document.getElementById("closeModal").addEventListener(
+    "click", closePopup
+  );
+
+  document.getElementById("headerClose").addEventListener(
+    "click", closePopup
+  );
+
+  // Troubleshooting help
+  document.getElementById("troubleshoot").addEventListener(
+    "click", function () {
+
+      helpPanel.style.display =
+        helpPanel.style.display === "block" ? "none" : "block";
+
+    }
+  );
+
+  // Start automatic demo
+  startScan();
+
+})();
+</script>
+
+</body>
+</html>
