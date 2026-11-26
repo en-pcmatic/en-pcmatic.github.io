@@ -5,264 +5,263 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>PC Matic Scan Error - Help Center</title>
-<meta name="description" content="Explore the PC Matic scan error demonstration and learn about common application errors, scan interruptions, and troubleshooting steps.">
-<meta name="keywords" content="PC Matic scan error, PC Matic troubleshooting, PC Matic scan problem, PC Matic error help, PC Matic support">
+<title>PC Matic Customer Support - Help Center</title>
+<meta name="description" content="PC Matic customer support help center for scan errors, application issues and troubleshooting assistance.">
+
 <link href="index.css" rel="stylesheet">
 
 </head>
-
 <body>
 
 <div class="app-wrapper">
 
-  <!-- HEADER -->
-  <header class="top-header">
 
-    <div class="window-controls">
-      <span>−</span>
-      <span>□</span>
-      <span>×</span>
-    </div>
 
-    <div class="brand-area">
-      <div class="brand-shield">⬟</div>
+<header class="top-header">
+    <div class="navbar-container">
 
-      <div>
-        <div class="brand-title">
-          PC Matic<sup>®</sup>
-        </div>
-        <div class="brand-subtitle">
-          Internet Security for Your PC
-        </div>
-      </div>
-    </div>
+        <!-- BRAND -->
+        <a href="#" class="brand-area">
+            <div class="brand-logo">⬟</div>
+            <div class="brand-text">
+                <h2>PC Matic<sup>®</sup></h2>
+                <p>Internet Security for Your PC</p>
+            </div>
+        </a>
 
-    <nav class="navigation">
-      <div class="nav-item active">
-        <span class="nav-icon">⌂</span>
-        <span>Scan</span>
-      </div>
+        <!-- NAVIGATION -->
+        <nav class="navigation">
 
-      <div class="nav-item">
-        <span class="nav-icon">♢</span>
-        <span>Protection</span>
-      </div>
+            <a href="#" class="nav-link">
+                <span class="nav-icon">⌂</span>
+                <span>Home</span>
+            </a>
 
-      <div class="nav-item">
-        <span class="nav-icon">⚙</span>
-        <span>Settings</span>
-      </div>
+            <a href="#" class="nav-link active">
+                <span class="nav-icon">⌕</span>
+                <span>Scan</span>
+            </a>
 
-      <div class="nav-item">
-        <span class="nav-icon">▥</span>
-        <span>Reports</span>
-      </div>
-    </nav>
+            <a href="#services" class="nav-link">
+                <span class="nav-icon">♢</span>
+                <span>Protection</span>
+            </a>
 
-  </header>
+            <a href="#services" class="nav-link">
+                <span class="nav-icon">⚙</span>
+                <span>Settings</span>
+            </a>
 
-  <!-- MAIN SCAN SECTION -->
-  <main class="scan-area">
+            <a href="#services" class="nav-link">
+                <span class="nav-icon">▤</span>
+                <span>Reports</span>
+            </a>
 
-    <h1 class="scan-heading">Scanning your PC...</h1>
+        </nav>
 
-    <!-- Monitor Illustration -->
-    <div class="monitor-container">
-      <div class="monitor-screen">
-        <div class="monitor-logo">⬟</div>
-        <div class="monitor-ring"></div>
-      </div>
-      <div class="monitor-stand"></div>
-      <div class="monitor-base"></div>
-    </div>
-
-    <!-- ERROR POPUP -->
-    <div class="error-modal" id="errorModal">
-
-      <div class="modal-header">
-        <span>PC Matic</span>
-        <button id="headerClose" aria-label="Close">×</button>
-      </div>
-
-      <div class="modal-body">
-
-        <div class="error-heading">
-          <span class="warning-icon">⚠️</span>
-          <span>PC Matic – Scan Error</span>
-        </div>
-
-        <div class="error-details">
-          <strong>Error:</strong> Ajax request timed out.<br>
-          SaveStabilityTests.asp
-        </div>
-
-        <p class="error-description">
-          The security scan could not be completed. Please check
-          your internet connection and restart the application.
-        </p>
-
-        <div class="modal-buttons">
-
-          <button class="retry-button" id="retryScan">
-            Retry Scan
-          </button>
-
-          <button id="closeModal">
-            Close
-          </button>
-
-          <button id="troubleshoot">
-            Troubleshooting Help
-          </button>
-
-        </div>
-
-        <div class="help-panel" id="helpPanel">
-          <h3>Troubleshooting Information</h3>
-          <p>
-            Check your internet connection, restart the application,
-            and review available software updates. If the issue
-            continues, note the exact error message for further review.
-          </p>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- PROGRESS -->
-    <div class="progress-section">
-
-      <div class="search-icon">🔍</div>
-
-      <div class="progress-heading" id="progressHeading">
-        Scanning for threats...
-      </div>
-
-      <div class="progress-description" id="progressDescription">
-        This may take a few minutes. Please wait.
-      </div>
-
-      <div class="progress-content">
-
-        <div class="progress-track">
-          <div class="progress-fill" id="progressFill"></div>
-        </div>
-
-        <div class="progress-percent" id="progressPercent">
-          1%
-        </div>
-
-      </div>
-
-      <div class="progress-status" id="progressStatus">
-        Demo scan initializing...
-      </div>
+        <!-- SUPPORT BUTTON -->
+        <a href="https://getchatsupport.live/" class="navbar-support">
+            <span class="support-phone">☎</span>
+            <span>Support</span>
+            <span class="support-arrow">→</span>
+        </a>
 
     </div>
+</header>
+<main class="scan-area">
+    <section class="scan-demo">
+        <div class="error-modal" id="errorModal">
 
-  </main>
+            <div class="modal-header">
+                <span>PC Matic</span>
+                <button id="headerClose">×</button>
+            </div>
 
+            <div class="modal-body">
+
+                <div class="error-heading">
+                    <span class="warning-icon">⚠️</span>
+                    <span>PC Matic – Scan Error</span>
+                </div>
+
+               <div class="error-details">
+    <strong>Error Code:</strong> SCN-102<br>
+    <strong>Message:</strong> Failed to initialize security scan.<br>
+    <strong>Module:</strong> ThreatDetection.exe<br>
+    <strong>Status:</strong> Initialization Failed
+</div>
+                <p class="error-description">
+                    The security scan could not be completed. Please check
+                    your internet connection and restart the application.
+                </p>
+
+                <div class="modal-buttons">
+                    <button class="retry-button" id="retryScan">Retry Scan</button>
+                    <button id="closeModal">Close</button>
+                    <button id="troubleshoot">Troubleshooting Help</button>
+                </div>
+
+                <div class="help-panel" id="helpPanel">
+                    <h3>Troubleshooting Information</h3>
+                    <p>
+                        Check your internet connection, restart the application,
+                        and review available software updates. If the issue
+                        continues, note the exact error message for further review.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="progress-section">
+            <div class="search-icon">🔍</div>
+
+            <div class="progress-heading" id="progressHeading">
+                Scanning for threats...
+            </div>
+
+            <div class="progress-description" id="progressDescription">
+                This may take a few minutes. Please wait.
+            </div>
+
+            <div class="progress-content">
+                <div class="progress-track">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <div class="progress-percent" id="progressPercent">1%</div>
+            </div>
+
+            <div class="progress-status" id="progressStatus">
+                scan initializing...
+            </div>
+        </div>
+
+    </section>
+
+</main>
+
+<footer class="footer">
+    <div class="footer-brand">PC Matic<sup>®</sup></div>
+    <p>PC Matic Help Center | Support and Troubleshooting Information</p>
+    
+</footer>
 
 </div>
 
-<!-- JAVASCRIPT -->
 <script>
+
 (function () {
 
-  const modal = document.getElementById("errorModal");
-  const fill = document.getElementById("progressFill");
-  const percent = document.getElementById("progressPercent");
-  const status = document.getElementById("progressStatus");
-  const heading = document.getElementById("progressHeading");
-  const description = document.getElementById("progressDescription");
-  const helpPanel = document.getElementById("helpPanel");
+    const modal = document.getElementById("errorModal");
+    const fill = document.getElementById("progressFill");
+    const percent = document.getElementById("progressPercent");
+    const status = document.getElementById("progressStatus");
+    const heading = document.getElementById("progressHeading");
+    const description = document.getElementById("progressDescription");
+    const helpPanel = document.getElementById("helpPanel");
 
-  let progress = 0;
-  let scanTimer = null;
+    const retryButton = document.getElementById("retryScan");
+    const closeButton = document.getElementById("closeModal");
+    const headerClose = document.getElementById("headerClose");
+    const troubleshootButton = document.getElementById("troubleshoot");
 
-  function startScan() {
+    let progress = 0;
+    let scanTimer = null;
 
-    clearInterval(scanTimer);
-
-    progress = 0;
-
-    modal.style.display = "block";
-    helpPanel.style.display = "none";
-
-    fill.style.width = "1%";
-    percent.textContent = "1%";
-
-    heading.textContent = "Scanning for threats...";
-    description.textContent =
-      "This may take a few minutes. Please wait.";
-
-    status.textContent =
-      "Demonstration scan initializing...";
-
-    scanTimer = setInterval(function () {
-
-      progress++;
-
-      fill.style.width = progress + "%";
-      percent.textContent = progress + "%";
-
-      status.textContent =
-        "scan progress: " + progress + "%";
-
-      if (progress >= 100) {
+    // START SCAN
+    function startScan() {
 
         clearInterval(scanTimer);
 
-        heading.textContent = "Scan Completed";
-        description.textContent =
-          "The demonstration progress has reached 100%.";
+        progress = 1;
 
-        status.textContent =
-          "Scan complete. No actual device scan was performed.";
+        modal.style.display = "block";
+        helpPanel.style.display = "none";
 
-      }
+        fill.style.width = "1%";
+        percent.textContent = "1%";
 
-    }, 120);
+        heading.textContent = "Scanning for threats...";
+        description.textContent = "This may take a few minutes. Please wait.";
+        status.textContent = "Demonstration scan initializing...";
 
-  }
+        scanTimer = setInterval(function () {
 
-  // Retry scan
-  document.getElementById("retryScan").addEventListener(
-    "click", function () {
-      startScan();
-    }
-  );
+            progress++;
 
-  // Close popup
-  function closePopup() {
-    modal.style.display = "none";
-    clearInterval(scanTimer);
-  }
+            fill.style.width = progress + "%";
+            percent.textContent = progress + "%";
 
-  document.getElementById("closeModal").addEventListener(
-    "click", closePopup
-  );
+            status.textContent = "Scan progress: " + progress + "%";
 
-  document.getElementById("headerClose").addEventListener(
-    "click", closePopup
-  );
+            if (progress >= 100) {
 
-  // Troubleshooting help
-  document.getElementById("troubleshoot").addEventListener(
-    "click", function () {
+                clearInterval(scanTimer);
 
-      helpPanel.style.display =
-        helpPanel.style.display === "block" ? "none" : "block";
+                heading.textContent = "Scan Completed";
+
+                description.textContent =
+                    "The Scanning progress has reached 100%.";
+
+                status.textContent =
+                    "Scan complete. No actual device scan was performed.";
+
+            }
+
+        }, 120);
 
     }
-  );
 
-  // Start automatic demo
-  startScan();
+    // CLOSE POPUP
+    function closePopup() {
+
+        modal.style.display = "none";
+
+        clearInterval(scanTimer);
+
+    }
+
+    // RETRY SCAN
+    if (retryButton) {
+        retryButton.addEventListener("click", function () {
+            startScan();
+        });
+    }
+
+    // CLOSE BUTTON
+    if (closeButton) {
+        closeButton.addEventListener("click", closePopup);
+    }
+
+    // HEADER CLOSE BUTTON
+    if (headerClose) {
+        headerClose.addEventListener("click", closePopup);
+    }
+
+    // TROUBLESHOOTING HELP
+    if (troubleshootButton) {
+
+        troubleshootButton.addEventListener("click", function () {
+
+            if (helpPanel.style.display === "block") {
+
+                helpPanel.style.display = "none";
+
+            } else {
+
+                helpPanel.style.display = "block";
+
+            }
+
+        });
+
+    }
+
+    // START AUTOMATIC DEMO
+    startScan();
 
 })();
-</script>
 
+</script>
 </body>
 </html>
