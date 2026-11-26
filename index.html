@@ -153,6 +153,9 @@
 (function () {
 
     const modal = document.getElementById("errorModal");
+
+    const progressSection = document.querySelector(".progress-section");
+
     const fill = document.getElementById("progressFill");
     const percent = document.getElementById("progressPercent");
     const status = document.getElementById("progressStatus");
@@ -168,47 +171,80 @@
     let progress = 0;
     let scanTimer = null;
 
-    // START SCAN
+    // SHOW ERROR POPUP ONLY
+    function showError() {
+
+        clearInterval(scanTimer);
+
+        progressSection.style.display = "none";
+
+        modal.style.display = "block";
+
+        helpPanel.style.display = "none";
+
+    }
+
+    // START SCANNING
     function startScan() {
 
         clearInterval(scanTimer);
 
-        progress = 1;
+        progress = 0;
 
-        modal.style.display = "block";
+        // Hide error popup
+        modal.style.display = "none";
+
+        // Show only scanning section
+        progressSection.style.display = "block";
+
         helpPanel.style.display = "none";
 
         fill.style.width = "1%";
         percent.textContent = "1%";
 
         heading.textContent = "Scanning for threats...";
-        description.textContent = "This may take a few minutes. Please wait.";
-        status.textContent = "Demonstration scan initializing...";
+
+        description.textContent =
+            "Please wait while your system is being scanned.";
+
+        status.textContent = "Scan initializing...";
 
         scanTimer = setInterval(function () {
 
             progress++;
 
             fill.style.width = progress + "%";
+
             percent.textContent = progress + "%";
 
-            status.textContent = "Scan progress: " + progress + "%";
+            status.textContent =
+                "Scanning system files: " + progress + "%";
 
-            if (progress >= 100) {
+            if (progress >= 75) {
 
                 clearInterval(scanTimer);
 
-                heading.textContent = "Scan Completed";
+                // Wait briefly, then show error popup
+                setTimeout(function () {
 
-                description.textContent =
-                    "The Scanning progress has reached 100%.";
+                    showError();
 
-                status.textContent =
-                    "Scan complete. No actual device scan was performed.";
+                }, 700);
 
             }
 
-        }, 120);
+        }, 100);
+
+    }
+
+    // RETRY SCAN BUTTON
+    if (retryButton) {
+
+        retryButton.addEventListener("click", function () {
+
+            startScan();
+
+        });
 
     }
 
@@ -221,19 +257,10 @@
 
     }
 
-    // RETRY SCAN
-    if (retryButton) {
-        retryButton.addEventListener("click", function () {
-            startScan();
-        });
-    }
-
-    // CLOSE BUTTON
     if (closeButton) {
         closeButton.addEventListener("click", closePopup);
     }
 
-    // HEADER CLOSE BUTTON
     if (headerClose) {
         headerClose.addEventListener("click", closePopup);
     }
@@ -243,24 +270,21 @@
 
         troubleshootButton.addEventListener("click", function () {
 
-            if (helpPanel.style.display === "block") {
-
-                helpPanel.style.display = "none";
-
-            } else {
-
-                helpPanel.style.display = "block";
-
-            }
+            helpPanel.style.display =
+                helpPanel.style.display === "block"
+                    ? "none"
+                    : "block";
 
         });
 
     }
 
-    // START AUTOMATIC DEMO
-    startScan();
+    // INITIAL PAGE LOAD
+    showError();
 
 })();
+
+
 
 </script>
 </body>
