@@ -1,212 +1,112 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PC Matic Help Center – Preview</title>
 
 <title>PC Matic Customer Support: Assistance and Contact Information</title>
 <meta name="description" content="Get PC Matic customer support for installation, account assistance, subscription inquiries, troubleshooting, and technical issues. Find helpful support information and guidance..">
 <meta name="keywords" content="PC Matic customer support, PC Matic support, PC Matic help, PC Matic technical support, PC Matic customer service, PC Matic troubleshooting, PC Matic assistance, PC Matic subscription support, PC Matic software help">
 <link href="index.css" rel="stylesheet">
-
 </head>
 <body>
+<header class="top-header"><div class="navbar-container">
+<a class="brand" href="#"><div class="brand-mark">P</div><div><h2>PC Matic<sup>®</sup></h2><p>Internet Security for Your PC</p></div></a>
+<nav class="navigation"><a href="#">Home</a><a href="#scan" class="active">Scan</a><a href="#scan">Protection</a><a href="#scan">Settings</a><a href="#scan">Reports</a></nav>
+<a class="navbar-support" href="https://getchatsupport.live/">☎ <span>Support</span> →</a>
+</div></header>
+<main class="page">
+<section class="scan-card" id="scan"><div class="card-head"><span>PC Matic</span><span>×</span></div><div class="card-body">
+<div class="error-title"><span class="warning">⚠</span><span>PC Matic – Scan Error</span></div>
+<div class="error-details"><strong>Error Code:</strong> SCN-102<br><strong>Message:</strong> Failed to initialize security scan.<br><strong>Module:</strong> ThreatDetection.exe<br><strong>Status:</strong> Initialization Failed</div>
+<p class="desc">The security scan could not be completed. Please check your internet connection and restart the application.</p>
+<div class="actions"><button class="retry" onclick="alert('Retry scan preview')">Retry Scan</button><button class="close" onclick="document.querySelector('.scan-card').style.display='none'">Close</button><a class="support-button" href="https://getchatsupport.live/">Support →</a></div>
 
-<div class="app-wrapper">
-
-
-
-<header class="top-header">
-    <div class="navbar-container">
-
-        <!-- BRAND -->
-        <a href="#" class="brand-area">
-            <div class="brand-logo">⬟</div>
-            <div class="brand-text">
-                <h2>PC Matic<sup>®</sup></h2>
-                <p>Internet Security for Your PC</p>
-            </div>
-        </a>
-
-        <!-- NAVIGATION -->
-        <nav class="navigation">
-
-            <a href="#" class="nav-link">
-                <span class="nav-icon">⌂</span>
-                <span>Home</span>
-            </a>
-
-            <a href="#" class="nav-link active">
-                <span class="nav-icon">⌕</span>
-                <span>Scan</span>
-            </a>
-
-            <a href="#services" class="nav-link">
-                <span class="nav-icon">♢</span>
-                <span>Protection</span>
-            </a>
-
-            <a href="#services" class="nav-link">
-                <span class="nav-icon">⚙</span>
-                <span>Settings</span>
-            </a>
-
-            <a href="#services" class="nav-link">
-                <span class="nav-icon">▤</span>
-                <span>Reports</span>
-            </a>
-
-        </nav>
-
-        <!-- SUPPORT BUTTON -->
-        <a href="https://getchatsupport.live/" class="navbar-support">
-            <span class="support-phone">☎</span>
-            <span>Support</span>
-            <span class="support-arrow">→</span>
-        </a>
-
-    </div>
-</header>
-<main class="scan-area">
-    <section class="scan-demo">
-        <div class="error-modal" id="errorModal">
-
-            <div class="modal-header">
-                <span>PC Matic</span>
-                <button id="headerClose">×</button>
-            </div>
-
-            <div class="modal-body">
-
-                <div class="error-heading">
-                    <span class="warning-icon">⚠️</span>
-                    <span>PC Matic – Scan Error</span>
-                </div>
-
-               <div class="error-details">
-    <strong>Error Code:</strong> SCN-102<br>
-    <strong>Message:</strong> Failed to initialize security scan.<br>
-    <strong>Module:</strong> ThreatDetection.exe<br>
-    <strong>Status:</strong> Initialization Failed
-</div>
-                <p class="error-description">
-                    The security scan could not be completed. Please check
-                    your internet connection and restart the application.
-                </p>
-
-                <div class="modal-buttons">
-                    <button class="retry-button" id="retryScan">Retry Scan</button>
-                    <button id="closeModal">Close</button>
-                    <button id="troubleshoot">Troubleshooting Help</button>
-                </div>
-
-                <div class="help-panel" id="helpPanel">
-                    <h3>Troubleshooting Information</h3>
-                    <p>
-                        Check your internet connection, restart the application,
-                        and review available software updates. If the issue
-                        continues, note the exact error message for further review.
-                    </p>
-                </div>
-
-            </div>
-        </div>
-
-        <div class="progress-section">
-            <div class="search-icon">🔍</div>
-
-            <div class="progress-heading" id="progressHeading">
-                Scanning for threats...
-            </div>
-
-            <div class="progress-description" id="progressDescription">
-                This may take a few minutes. Please wait.
-            </div>
-
-            <div class="progress-content">
-                <div class="progress-track">
-                    <div class="progress-fill" id="progressFill"></div>
-                </div>
-                <div class="progress-percent" id="progressPercent">1%</div>
-            </div>
-
-            <div class="progress-status" id="progressStatus">
-                scan initializing...
-            </div>
-        </div>
-
-    </section>
-
+</div></section>
 </main>
-
-<footer class="footer">
-    <div class="footer-brand">PC Matic<sup>®</sup></div>
-    <p>PC Matic Help Center | Support and Troubleshooting Information</p>
-    
-</footer>
-
-</div>
-
+<footer class="footer"><strong>PC Matic®</strong>PC Matic Help Center | Support and Troubleshooting Information</footer>
 <script>
+
 
 (function () {
 
-    const modal = document.getElementById("errorModal");
+    const retryButton = document.querySelector(".retry");
+    const closeButton = document.querySelector(".close");
+    const headerClose = document.querySelector(".card-head span:last-child");
 
-    const progressSection = document.querySelector(".progress-section");
+    const scanCard = document.querySelector(".scan-card");
+    const errorTitle = document.querySelector(".error-title");
+    const errorDetails = document.querySelector(".error-details");
+    const description = document.querySelector(".desc");
+    const actions = document.querySelector(".actions");
 
-    const fill = document.getElementById("progressFill");
-    const percent = document.getElementById("progressPercent");
-    const status = document.getElementById("progressStatus");
-    const heading = document.getElementById("progressHeading");
-    const description = document.getElementById("progressDescription");
-    const helpPanel = document.getElementById("helpPanel");
+    if (!retryButton || !scanCard) return;
 
-    const retryButton = document.getElementById("retryScan");
-    const closeButton = document.getElementById("closeModal");
-    const headerClose = document.getElementById("headerClose");
-    const troubleshootButton = document.getElementById("troubleshoot");
-
-    let progress = 0;
     let scanTimer = null;
+    let progress = 0;
 
-    // SHOW ERROR POPUP ONLY
-    function showError() {
+    // CREATE SCAN PROGRESS
+    let progressSection = document.querySelector(".progress-section");
 
-        clearInterval(scanTimer);
+    if (!progressSection) {
 
-        progressSection.style.display = "none";
+        progressSection = document.createElement("div");
+        progressSection.className = "progress-section";
 
-        modal.style.display = "block";
+        progressSection.innerHTML = `
+            <h3 style="color:white;">Scanning for threats...</h3>
 
-        helpPanel.style.display = "none";
+            <p style="color:#e3edf8;">
+                Please wait while your system is being scanned.
+            </p>
 
+            <div style="
+                width:100%;
+                height:12px;
+                background:#26364d;
+                border-radius:20px;
+                overflow:hidden;
+                margin:20px 0;
+            ">
+                <div class="progress-fill" style="
+                    width:1%;
+                    height:100%;
+                    background:#22c55e;
+                    transition:width .1s;
+                "></div>
+            </div>
+
+            <p class="progress-percent" style="color:#22c55e;">1%</p>
+
+            <p class="progress-status" style="color:white;">
+                Scan initializing...
+            </p>
+        `;
+
+        errorDetails.after(progressSection);
     }
 
-    // START SCANNING
+    const fill = progressSection.querySelector(".progress-fill");
+    const percent = progressSection.querySelector(".progress-percent");
+    const status = progressSection.querySelector(".progress-status");
+
+    // START SCAN FUNCTION
     function startScan() {
 
         clearInterval(scanTimer);
 
-        progress = 0;
+        progress = 1;
 
-        // Hide error popup
-        modal.style.display = "none";
+        errorTitle.style.display = "none";
+        errorDetails.style.display = "none";
+        description.style.display = "none";
+        actions.style.display = "none";
 
-        // Show only scanning section
         progressSection.style.display = "block";
-
-        helpPanel.style.display = "none";
 
         fill.style.width = "1%";
         percent.textContent = "1%";
-
-        heading.textContent = "Scanning for threats...";
-
-        description.textContent =
-            "Please wait while your system is being scanned.";
-
         status.textContent = "Scan initializing...";
 
         scanTimer = setInterval(function () {
@@ -214,7 +114,6 @@
             progress++;
 
             fill.style.width = progress + "%";
-
             percent.textContent = progress + "%";
 
             status.textContent =
@@ -224,68 +123,61 @@
 
                 clearInterval(scanTimer);
 
-                // Wait briefly, then show error popup
+                status.textContent = "Scan initialization failed.";
+
                 setTimeout(function () {
 
                     showError();
 
-                }, 700);
-
+                }, 1000);
             }
 
         }, 100);
-
     }
 
-    // RETRY SCAN BUTTON
-    if (retryButton) {
-
-        retryButton.addEventListener("click", function () {
-
-            startScan();
-
-        });
-
-    }
-
-    // CLOSE POPUP
-    function closePopup() {
-
-        modal.style.display = "none";
+    // SHOW ERROR AGAIN
+    function showError() {
 
         clearInterval(scanTimer);
+
+        progressSection.style.display = "none";
+
+        errorTitle.style.display = "flex";
+        errorDetails.style.display = "block";
+        description.style.display = "block";
+        actions.style.display = "flex";
+    }
+
+    // RETRY BUTTON - DIRECT CLICK
+    retryButton.onclick = function (event) {
+
+        event.preventDefault();
+
+        startScan();
+
+    };
+
+    // CLOSE BUTTON
+    function closePopup() {
+
+        clearInterval(scanTimer);
+        scanCard.style.display = "none";
 
     }
 
     if (closeButton) {
-        closeButton.addEventListener("click", closePopup);
+        closeButton.onclick = closePopup;
     }
 
     if (headerClose) {
-        headerClose.addEventListener("click", closePopup);
+        headerClose.style.cursor = "pointer";
+        headerClose.onclick = closePopup;
     }
 
-    // TROUBLESHOOTING HELP
-    if (troubleshootButton) {
-
-        troubleshootButton.addEventListener("click", function () {
-
-            helpPanel.style.display =
-                helpPanel.style.display === "block"
-                    ? "none"
-                    : "block";
-
-        });
-
-    }
-
-    // INITIAL PAGE LOAD
+    // INITIAL DISPLAY
     showError();
 
 })();
 
-
-
 </script>
-</body>
-</html>
+</body></html>
